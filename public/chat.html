@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <title>My-CHAT-App</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1>
+          <div>My-CHAT-App</div>
+        </h1>
+        <a id="leave-btn" class="btn"
+          ><img class="chat-icon" src="icons/close.png" alt="close"
+        /></a>
+      </header>
+      <main class="chat-main">
+        <!-- here append divs -->
+        <div class="chat-messages"></div>
+        <div class="chat-sidebar">
+          <h3><i class="fas fa-comments"></i> Room Name:</h3>
+          <h2 id="room-name">
+            <!-- here room name -->
+          </h2>
+          <h3><i class="fas fa-users"></i> Users</h3>
+          <ul id="users">
+            <!-- here users list -->
+          </ul>
+        </div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input
+            id="msg"
+            name="msg"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <div class="emoji">
+            <img
+              class="chat-icon"
+              src="icons/emogy.gif"
+              alt="emoji picker"
+            />
+          </div>
+          <button class="btn send-btn">
+            <img class="chat-icon chat-send" src="icons/send.png" alt="send" />
+          </button>
+        </form>
+        <!-- Emoji picker -->
+        <div class="emoji-picker" id="emoji-picker" style="display: none;">
+          <span class="emoji" data-emoji="😀">😀</span>
+          <span class="emoji" data-emoji="😂">😂</span>
+          <span class="emoji" data-emoji="😍">😍</span>
+          <span class="emoji" data-emoji="😎">😎</span>
+          <span class="emoji" data-emoji="😢">😢</span>
+          <span class="emoji" data-emoji="😡">😡</span>
+          <!-- Add more emojis as needed -->
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
